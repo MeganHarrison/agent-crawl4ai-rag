@@ -1,15 +1,11 @@
-
-Purpose
+#Purpose
 
 Build a modern, agent-powered frontend application in Next.js that connects directly to an existing and fully-deployed backend (MCP RAG server) at https://agent-crawl4ai-rag.onrender.com.
 
-⸻
+#System Context
 
-System Context
-
-Backend
-	•	The backend application is already built and deployed, serving all API endpoints at
-https://agent-crawl4ai-rag.onrender.com.
+##Backend
+	•	The backend application is already built and deployed, serving all API endpoints at https://agent-crawl4ai-rag.onrender.com.
 	•	Primary focus: Build the frontend from scratch and connect it to this backend.
 	•	Integration is required:
 	•	You must connect your frontend to the deployed backend endpoint and verify that all features and API endpoints work as intended.
@@ -19,9 +15,7 @@ https://agent-crawl4ai-rag.onrender.com.
 	•	You may run/test backend scripts locally if needed to diagnose or fix issues, but the standard workflow is to use the deployed endpoint.
 	•	If bugs, performance bottlenecks, or API errors are discovered during integration, document and fix them as part of the process.
 
-⸻
-
-Key Integration Points
+##Key Integration Points
 	•	Backend Endpoint: https://agent-crawl4ai-rag.onrender.com
 	•	API Integration:
 	•	All frontend features (crawling, RAG, uploads, authentication, etc.) must connect to and use this backend.
@@ -30,9 +24,8 @@ Key Integration Points
 	•	Backend Files:
 	•	Treat all provided backend files and configs as in-scope for static code review, bug fixing, optimization, and security improvement.
 
-⸻
 
-Frontend Requirements
+##Frontend Requirements
 
 1. Tech Stack
 	•	Next.js (App Router)
@@ -60,25 +53,23 @@ UI and data flow should support orchestrating tasks—e.g., agents can call diff
 	•	Reusability:
 Components (chat, cards, tables, uploads) should be easily extendable for new agents in the future.
 
-⸻
 
-Functional Specifications
+##Functional Specifications
 
-Documentation Expert
+###Documentation Expert
 	•	Chat with documentation via MCP RAG endpoint
 	•	Crawl new websites/documentation (smart URL detection)
 	•	Display source/citation with each answer
 
-Ultimate Business Strategist
+###Ultimate Business Strategist
 	•	Chat interface for business Q&A
 	•	Upload new business documents (SOPs, sales calls, guides, competitors, etc.)
 	•	Pull insights from all knowledge (web + uploads)
 
-Knowledge Base
+###Knowledge Base
 	•	List/search all available documents and sources
 	•	Filter by type, source, agent, or tags
 
-⸻
 
 User Flows
 	1.	Sign In:
@@ -92,9 +83,8 @@ Upload files, ask business questions
 	5.	Knowledge Base:
 Browse/search all knowledge, see details
 
-⸻
 
-Design Principles
+##Design Principles
 	•	Agent-centric:
 Every major function routes through an “agent”—UX and data both reflect this paradigm.
 	•	Extensible:
@@ -106,9 +96,8 @@ All development/testing should use the live backend endpoint.
 	•	Backend review and testing required:
 Provided backend code/config is in-scope for active code review, bug fixing, optimization, and security improvement.
 
-⸻
 
-Getting Started (For Developers & Codex)
+##Getting Started
 	1.	Set up a Next.js app with the required stack.
 	2.	Integrate Supabase Auth using UI components.
 	3.	Implement the Dashboard and Agent Pages per requirements above.
@@ -116,17 +105,15 @@ Getting Started (For Developers & Codex)
 	5.	Test and verify all frontend-backend integrations.
 	6.	Review and, if necessary, fix/improve backend files and config based on real integration testing and code analysis.
 
-⸻
 
-Reference Files
+##Reference Files
 	•	Backend code/config files
 (crawl4ai_mcp.py, utils.py, Dockerfile, crawled_pages.sql, pyproject.toml, etc.):
 In-scope for static code review, bug fixing, and optimization. You may run scripts locally if needed for testing or debugging.
 	•	Frontend: Build from scratch and integrate with the live backend endpoint.
 
-⸻
 
-TL;DR for Codex/Copilot
+##Summary
 	•	Your job: Build the frontend app and connect it to the deployed backend at https://agent-crawl4ai-rag.onrender.com.
 	•	Test every API and feature from the frontend, and debug both frontend and backend as needed.
 	•	Backend files are in-scope for review, optimization, and maintenance—actively fix any issues you find.
