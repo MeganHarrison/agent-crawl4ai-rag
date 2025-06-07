@@ -71,7 +71,7 @@ Components (chat, cards, tables, uploads) should be easily extendable for new ag
 	•	Filter by type, source, agent, or tags
 
 
-User Flows
+###User Flows
 	1.	Sign In:
 User logs in via Supabase Auth UI
 	2.	Dashboard:
